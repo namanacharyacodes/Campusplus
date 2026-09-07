@@ -1,0 +1,94 @@
+{
+  "colleges": [
+    {
+      "code": "GEC01",
+      "name": "Greenfield Engineering College",
+      "since": "1998",
+      "details": "Autonomous engineering institute, 4 campuses"
+    },
+    {
+      "code": "RVU02",
+      "name": "Riverdale University",
+      "since": "1975",
+      "details": "State university, main + north campus"
+    },
+    {
+      "code": "SPI03",
+      "name": "St. Patrick's Institute of Technology",
+      "since": "2004",
+      "details": "Private technical institute"
+    }
+  ],
+  "students": [
+    {
+      "id": "tsSCdZd6TF",
+      "name": "poorvi ",
+      "course": "AI ML",
+      "yearOfStudy": "1st",
+      "studentId": "referfcvfcefv",
+      "email": "eefvabhierf@gmail.com",
+      "collegeCode": "SPI03",
+      "createdAt": "2026-09-07T07:26:25.426Z"
+    },
+    {
+      "id": "yChHIGUiMP",
+      "name": "naman",
+      "course": "vlsi",
+      "yearOfStudy": "1st",
+      "studentId": "ygkkyufku",
+      "email": "rjyfth@gmail.com",
+      "collegeCode": "GEC01",
+      "createdAt": "2026-09-07T07:40:05.164Z"
+    }
+  ],
+  "problems": [
+    {
+      "id": "3vbA04C3kQ",
+      "studentId": "tsSCdZd6TF",
+      "collegeCode": "SPI03",
+      "description": "cracked beem",
+      "location": "first floor sjec",
+      "photoUrl": "/uploads/WZ6TesH3ly.jpeg",
+      "priority": "A",
+      "status": "completed",
+      "progressPercent": 100,
+      "progressNote": "",
+      "approxCompletionDate": null,
+      "completionDate": "2026-09-07T07:31:31.855Z",
+      "createdAt": "2026-09-07T07:27:23.517Z",
+      "updatedAt": "2026-09-07T07:31:31.855Z"
+    },
+    {
+      "id": "7DyA1oi7so",
+      "studentId": "tsSCdZd6TF",
+      "collegeCode": "SPI03",
+      "description": "broken wall\r\n",
+      "location": "sjec first floor ",
+      "photoUrl": "/uploads/nppLnlKxlK.jpg",
+      "priority": "B",
+      "status": "completed",
+      "progressPercent": 100,
+      "progressNote": "",
+      "approxCompletionDate": null,
+      "completionDate": "2026-09-07T07:38:03.947Z",
+      "createdAt": "2026-09-07T07:34:12.405Z",
+      "updatedAt": "2026-09-07T07:38:03.947Z"
+    },
+    {
+      "id": "O6Bo3yg43t",
+      "studentId": "yChHIGUiMP",
+      "collegeCode": "GEC01",
+      "description": "no books here",
+      "location": "libray,near bethani hostel",
+      "photoUrl": "/uploads/V3JO3vOFg1.jpg",
+      "priority": "C",
+      "status": "completed",
+      "progressPercent": 100,
+      "progressNote": "",
+      "approxCompletionDate": null,
+      "completionDate": "2026-09-07T08:11:52.842Z",
+      "createdAt": "2026-09-07T08:11:03.755Z",
+      "updatedAt": "2026-09-07T08:11:52.842Z"
+    }
+  ]
+}

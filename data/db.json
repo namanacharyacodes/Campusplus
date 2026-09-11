@@ -4,19 +4,45 @@
       "code": "GEC01",
       "name": "Greenfield Engineering College",
       "since": "1998",
+<<<<<<< HEAD
       "details": "Autonomous engineering institute, 4 campuses"
+=======
+      "details": "Autonomous engineering institute, 4 campuses",
+      "adminUsername": "admin_gec01",
+      "adminPasswordHash": "afd274b03653383a3a4dd2558834ef0d:26fb4a1bcdc1a372c9420f60536d0bb77c6f93200ed71c3e8b8e6aed4849b727c676ee88663133af0ddcbfb602c8251da899f7ec4144c462955a97c778489ef3"
+>>>>>>> 9c2d707 (Initialized Repo)
     },
     {
       "code": "RVU02",
       "name": "Riverdale University",
       "since": "1975",
+<<<<<<< HEAD
       "details": "State university, main + north campus"
+=======
+      "details": "State university, main + north campus",
+      "adminUsername": "admin_rvu02",
+      "adminPasswordHash": "8292d37d2f8e124ac2deaac589cff735:8c7733f79c72d4b91db029204847f8016e3169c825f829ab25090704903538a3850b04f1f90d76018c5a7f5200a79f00431d89c1db0101e600dba28d4db23887"
+>>>>>>> 9c2d707 (Initialized Repo)
     },
     {
       "code": "SPI03",
       "name": "St. Patrick's Institute of Technology",
       "since": "2004",
+<<<<<<< HEAD
       "details": "Private technical institute"
+=======
+      "details": "Private technical institute",
+      "adminUsername": "admin_spi03",
+      "adminPasswordHash": "4de77c377bc7922cbea1b198531572b6:5ec16c72fa8f7c3bc203804bb40a0d14ce1c76fefd8089c550e89820cd20e4a841deb3127828b87cd712774d37e1b73163d4bc0edcafb42917cf9bc8b6e29026"
+    },
+    {
+      "code": "SJEC04",
+      "name": "St. Joseph Engineering College Mangalore",
+      "since": "2002",
+      "details": "Engineering college in Mangalore",
+      "adminUsername": "admin_sjec04",
+      "adminPasswordHash": "9c5b6d8e7f1029384756a1b2c3d4e5f6:9ae762413281b4808d56e5eae2f41f85ddb85274d55113041f29bb2c4d730d9ddad3ac5a54e7ae1f7d03524583028d3effcbcd775ddce6cff205decbdc74a380"
+>>>>>>> 9c2d707 (Initialized Repo)
     }
   ],
   "students": [
@@ -56,7 +82,18 @@
       "approxCompletionDate": null,
       "completionDate": "2026-09-07T07:31:31.855Z",
       "createdAt": "2026-09-07T07:27:23.517Z",
+<<<<<<< HEAD
       "updatedAt": "2026-09-07T07:31:31.855Z"
+=======
+      "updatedAt": "2026-09-07T07:31:31.855Z",
+      "category": "other",
+      "severity": 1,
+      "ai": {
+        "analyzed": false
+      },
+      "duplicateGroupId": "3vbA04C3kQ",
+      "assignedRole": "student_rep"
+>>>>>>> 9c2d707 (Initialized Repo)
     },
     {
       "id": "7DyA1oi7so",
@@ -72,7 +109,18 @@
       "approxCompletionDate": null,
       "completionDate": "2026-09-07T07:38:03.947Z",
       "createdAt": "2026-09-07T07:34:12.405Z",
+<<<<<<< HEAD
       "updatedAt": "2026-09-07T07:38:03.947Z"
+=======
+      "updatedAt": "2026-09-07T07:38:03.947Z",
+      "category": "other",
+      "severity": 2,
+      "ai": {
+        "analyzed": false
+      },
+      "duplicateGroupId": "7DyA1oi7so",
+      "assignedRole": "student_rep"
+>>>>>>> 9c2d707 (Initialized Repo)
     },
     {
       "id": "O6Bo3yg43t",
@@ -88,7 +136,21 @@
       "approxCompletionDate": null,
       "completionDate": "2026-09-07T08:11:52.842Z",
       "createdAt": "2026-09-07T08:11:03.755Z",
+<<<<<<< HEAD
       "updatedAt": "2026-09-07T08:11:52.842Z"
     }
   ]
+=======
+      "updatedAt": "2026-09-07T08:11:52.842Z",
+      "category": "other",
+      "severity": 3,
+      "ai": {
+        "analyzed": false
+      },
+      "duplicateGroupId": "O6Bo3yg43t",
+      "assignedRole": "student_rep"
+    }
+  ],
+  "staff": []
+>>>>>>> 9c2d707 (Initialized Repo)
 }

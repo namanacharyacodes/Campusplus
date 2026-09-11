@@ -1,50 +1,53 @@
-# CampUs+
+# CampusPulse — AI Image Triage
 
-Report structural and maintenance problems on campus, get them auto-prioritized, and track them from "reported" through "in progress" to "completed" — matches the flow in your sketch (student profile → report a problem → college dashboard sorted by priority A/B/C).
+CampusPulse lets students upload a campus-maintenance photo and report. The server can send the image + description to OpenAI's Responses API and return structured triage data.
 
-## Run it in VS Code
+## AI features
 
-1. Open this folder (`campusplus`) in VS Code.
-2. Open a terminal (`` Ctrl+` `` / `` Cmd+` ``) and run:
-   ```
-   npm install
-   npm start
-   ```
-3. Open **http://localhost:3000** in your browser.
+Each new report can be analyzed for:
 
-That's it — no build step, no database to install. Data is stored in `data/db.json`, uploaded photos in `uploads/`.
+- **Category:** electrical, plumbing, structural, cleaning, furniture, other
+- **Severity:** 1 = critical, 2 = medium, 3 = minor
+- **Priority:** 1 = highest response priority, 2 = medium, 3 = low
+- **Hygiene score:** 1 = highest hygiene risk, 3 = lowest
+- **Safety score:** 1 = highest safety risk, 3 = lowest
+- **Cleanliness score:** 1 = worst cleanliness, 3 = best
+- **Duplicate grouping:** compares the new report with recent reports from the same college and links clear duplicates into the same `duplicateGroupId`
+- **AI summary and confidence**
 
-## What's in the box
+The college dashboard displays the AI category, scores, priority, and duplicate information.
 
-- **`server.js`** — Express API: colleges, student profiles, and problem reports (create / list / update status).
-- **`public/`** — the frontend: a single-page app (`index.html` + `app.js`, no framework) with the screens from your sketch:
-  - Landing → Student profile / College dashboard
-  - Student profile form (name, course, year, student ID, email, college picker)
-  - Report a problem (photo upload from camera or gallery, description, location — with a "use my current location" button)
-  - Student dashboard: **Problems / Progress / Solved** tabs
-  - College dashboard: **Reported / Work in progress / Completed** columns, each card showing an A (high) / B (mid) / C (low) priority badge, sorted priority-first
-- **`data/db.json`** — seeded with 3 example colleges so you can demo immediately.
+## Add the API key from the dashboard
 
-## The "AI judges priority" part
+1. Start the project with `npm install` and `npm start`.
+2. Open the college authority login.
+3. Open the college dashboard.
+4. Click **Add AI API key**.
+5. Paste an OpenAI API key beginning with `sk-` and save it.
+6. New student reports will use that key for image analysis.
 
-`server.js` has a `classifyPriority()` function. By default it uses a keyword heuristic (words like "crack", "exposed wire", "gas leak" → high priority; "leak", "broken", "mold" → mid; everything else → low) so the app fully works offline for your demo.
+The pasted college key is held **in server memory only** and is not written into `data/db.json`. It is lost when the server restarts, so it must be pasted again. For a production deployment, prefer a server-side environment variable such as `OPENAI_API_KEY` rather than allowing browser administrators to paste keys.
 
-If you want the real AI judge from your sketch, set an environment variable before starting the server:
+### Server-side key option
 
-```
-# macOS/Linux
-export ANTHROPIC_API_KEY=your-key-here
-npm start
+Windows PowerShell:
 
-# Windows (PowerShell)
-$env:ANTHROPIC_API_KEY="your-key-here"
+```powershell
+$env:OPENAI_API_KEY="sk-..."
 npm start
 ```
 
-With the key set, each report's description is sent to Claude, which replies with just `A`, `B`, or `C` based on structural risk, safety, and hygiene — same idea as the "judged by an AI" note in your wireframe. No key → automatic fallback to the heuristic, no crash.
+Command Prompt:
 
-## Extending it
+```cmd
+set OPENAI_API_KEY=sk-...
+npm start
+```
 
-- **Real photo-based AI judging**: the endpoint already has the uploaded file (`req.file`) in `server.js` — you could pass the image to a vision-capable Claude call alongside the description for a more accurate structural/hygiene assessment.
-- **College login**: right now "College dashboard" just asks you to pick a college from a list (matches your sketch's college-select screen). Swap in real auth if you need per-college accounts.
-- **Persistence**: `data/db.json` is a flat file, fine for a hackathon demo. Swap `readDB`/`writeDB` in `server.js` for a real database if you need concurrent writes at scale.
+You can optionally choose another vision-capable model with `OPENAI_MODEL`.
+
+## Important
+
+Without an API key, CampusPulse still works. It uses a small keyword-based fallback so the demo does not break. The fallback does **not** truly understand the image; real image judgement, category detection and duplicate reasoning require an OpenAI API key.
+
+OpenAI image analysis is performed server-side so the API key is not placed in the student browser code.
